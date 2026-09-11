@@ -1,0 +1,56 @@
+INDUSTRIAL MACHINE FAILURE PREDICTION FOR PREDICTIVE MAINTENANCE
+
+Student: Ambuj Singh
+Program: B.Tech Computer Science Engineering
+University: Galgotias University
+
+1. ABSTRACT
+Predictive maintenance uses machine and sensor data to identify abnormal operating conditions before a machine fails. This project develops a machine-learning based failure prediction system using temperature, rotational speed, torque, tool wear and machine type. Multiple classification algorithms are compared using precision, recall, F1-score and ROC-AUC. An auxiliary regression task estimates continuous tool wear. A small Streamlit interface is included for practical demonstration.
+
+2. OBJECTIVES
+• Predict machine failure before it occurs.
+• Explore sensor/process variables through EDA.
+• Handle categorical and numerical variables.
+• Address class imbalance.
+• Compare Logistic Regression, Decision Tree, Random Forest and SVM.
+• Evaluate models using precision, recall, F1 and ROC-AUC.
+• Provide a maintenance-risk alert.
+• Demonstrate an additional regression workflow.
+
+3. DATASET
+The working dataset contains 10,000 records and 14 columns following the AI4I 2020 predictive-maintenance dataset structure. The public UCI dataset is synthetic but designed to reflect realistic industrial predictive-maintenance conditions.
+
+4. FEATURES
+UDI, Product ID, Type, Air temperature [K], Process temperature [K], Rotational speed [rpm], Torque [Nm], Tool wear [min], Machine failure and failure-mode indicators.
+
+5. METHODOLOGY
+Data loading → validation → identifier/leakage removal → numerical scaling → categorical encoding → stratified train/test split → model training → evaluation → model selection → prediction interface.
+
+6. CLASS IMBALANCE
+Machine failures are much less frequent than normal observations. Class-weighted classifiers are used so that failure detection is not dominated by the majority class. Recall is emphasized because missing an actual failure can be more costly than generating an additional inspection alert.
+
+7. MODELS
+Logistic Regression provides a linear baseline. Decision Tree captures non-linear rules. Random Forest combines many trees and usually provides a strong tabular-data baseline. SVM can model non-linear decision boundaries after feature scaling.
+
+8. REGRESSION
+An auxiliary regression experiment predicts continuous tool-wear values from other operating variables. MAE, RMSE and R² are reported.
+
+9. MAINTENANCE ALERT
+The application converts predicted failure probability into three practical levels:
+LOW RISK: continue monitoring
+MEDIUM RISK: schedule inspection
+HIGH RISK: immediate maintenance review
+
+10. LIMITATIONS
+The AI4I dataset is synthetic. The model is a prototype for academic and portfolio demonstration and is not a safety-certified industrial control system. Real deployment would require validated plant-specific sensor data, calibration, monitoring, drift detection and domain-expert approval.
+
+11. CONCLUSION
+The project demonstrates a complete predictive-maintenance machine-learning workflow from data preparation to model evaluation and deployment. The design can be extended with live IoT sensor streams, model monitoring and a database-backed maintenance dashboard.
+
+12. FUTURE SCOPE
+• Real-time IoT sensor integration
+• Time-series forecasting
+• Remaining Useful Life estimation
+• Explainable AI with SHAP
+• Model monitoring and drift detection
+• Cloud deployment

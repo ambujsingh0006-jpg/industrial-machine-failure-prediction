@@ -1,0 +1,43 @@
+PROJECT 17 - VIVA QUICK NOTES
+
+What is the project?
+Industrial Machine Failure Prediction for Predictive Maintenance.
+
+What is predictive maintenance?
+Using machine condition data to predict possible failures early so maintenance can be planned before breakdown.
+
+Why this project?
+Unexpected machine failure can cause downtime, maintenance cost and production loss.
+
+Target?
+Machine failure: 0 = no failure, 1 = failure.
+
+Why recall?
+In failure prediction, missing a real failure can be costly, so recall is important.
+
+Why F1?
+It balances precision and recall.
+
+Why ROC-AUC?
+It evaluates ranking/discrimination across classification thresholds.
+
+Why Random Forest?
+It handles non-linear relationships well and is strong on tabular data.
+
+What is class imbalance?
+Failure observations are much fewer than normal observations.
+
+How did you handle it?
+Class-weighted classification models and stratified train/test splitting.
+
+What is feature engineering?
+Creating useful variables from raw measurements, for example temperature difference and power-related features.
+
+Why not use TWF/HDF/PWF/OSF/RNF as input?
+They are failure-mode labels derived from the target process and can cause target leakage. They are kept for analysis, not as predictive inputs.
+
+What is regression doing?
+An auxiliary regression experiment estimates continuous tool wear, demonstrating the regression workflow requested in the subject.
+
+Can this be used in real factories?
+Not directly. It is a portfolio/academic prototype. Real deployment needs validated plant data, safety review, calibration and monitoring.
