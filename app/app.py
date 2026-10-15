@@ -19,18 +19,45 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-.stApp {background:#f4f7fb;}
-.block-container {padding-top:1.8rem;max-width:1400px;}
+
+.stApp {
+    background: #f4f7fb;
+    color: #172033;
+}
+.block-container {
+    padding-top: 1.8rem;
+    max-width: 1400px;
+}
 .hero {
-    background:linear-gradient(120deg,#10233f,#155e75);
-    padding:28px;border-radius:18px;color:white;margin-bottom:22px;
+    background: linear-gradient(120deg, #10233f, #155e75);
+    padding: 28px;
+    border-radius: 18px;
+    color: white;
+    margin-bottom: 22px;
 }
-.hero h1 {color:white;margin:0;font-size:2.3rem;}
-.hero p {color:#dcecf5;margin:8px 0 0 0;}
+.hero h1, .hero p {
+    color: #ffffff !important;
+}
+h1, h2, h3, p, label,
+[data-testid="stMarkdownContainer"],
+[data-testid="stWidgetLabel"] p {
+    color: #172033 !important;
+}
 div[data-testid="stMetric"] {
-    background:white;padding:16px;border-radius:12px;
-    border:1px solid #e3e9f1;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e3e9f1;
 }
+div[data-testid="stMetric"] label,
+div[data-testid="stMetric"] [data-testid="stMetricValue"],
+div[data-testid="stMetric"] [data-testid="stMetricLabel"] {
+    color: #172033 !important;
+}
+div[data-testid="stAlert"] p {
+    color: #172033 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
